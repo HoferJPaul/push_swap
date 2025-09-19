@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/19 14:59:01 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:20:32 by phofer           ###   ########.fr       */
+/*   Created: 2025/09/19 16:14:59 by phofer            #+#    #+#             */
+/*   Updated: 2025/09/19 16:16:28 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void	push(t_node **from, t_node **to)
+int	find_min_index(t_node *stack)
 {
-	t_node	*tmp;
+	int	min;
 
-	if (!*from)
-		return ;
-	tmp = *from;
-	*from = (*from)->next;
-	tmp->next = *to;
-	*to = tmp;
+	if (!stack)
+		return (-1);
+	min = stack->index;
+	while (stack)
+	{
+		if (stack->index < min)
+			min = stack->index;
+		stack = stack->next;
+	}
+	return (min);
 }
 
-void	pa(t_node **a, t_node **b)
+int	get_position(t_node *stack, int index)
 {
-	push(b, a);
-	ft_putstr_fd("pa\n", 1);
-}
+	int	pos;
 
-void	pb(t_node **a, t_node **b)
-{
-	push(a, b);
-	ft_putstr_fd("pb\n", 1);
+	pos = 0;
+	while (stack)
+	{
+		if (stack->index == index)
+			return (pos);
+		pos++;
+		stack = stack->next;
+	}
+	return (-1);
 }
-

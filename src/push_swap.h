@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/18 20:13:37 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/19 16:21:35 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,22 @@ int		ps_index(t_node *stack_a);
 void	print_stack(t_node *stack);
 void	free_stack(t_node **stack);
 void	free_split(char **args);
+
+/* ==== utils.c ==== */
+int		find_min_index(t_node *stack);
+int		get_position(t_node *stack, int index);
+
+/* ==== algorithms ==== */
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **a, t_node **b);
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
 
 #endif

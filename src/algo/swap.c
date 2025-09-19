@@ -6,11 +6,11 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 14:36:50 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 14:54:30 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/19 16:20:46 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	swap(t_node **stack)
 {
