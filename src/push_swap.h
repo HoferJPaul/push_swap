@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:21:35 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/19 16:52:16 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,18 @@ void	print_stack(t_node *stack);
 void	free_stack(t_node **stack);
 void	free_split(char **args);
 
+/* ==== sort.c ==== */
+void	two_sort(t_node **stack);
+void	three_sort(t_node **stack);
+void	four_sort(t_node **a, t_node **b);
+void	five_sort(t_node **a, t_node **b);
+void	sort_dispatch(t_node **a, t_node **b);
+
 /* ==== utils.c ==== */
 int		find_min_index(t_node *stack);
 int		get_position(t_node *stack, int index);
+void	bring_index_to_top(t_node **stack, int index);
+int		is_sorted(t_node *stack);
 
 /* ==== algorithms ==== */
 void	pa(t_node **a, t_node **b);
