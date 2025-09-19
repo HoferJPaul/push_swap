@@ -1,47 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/19 14:36:50 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 14:54:30 by phofer           ###   ########.fr       */
+/*   Created: 2025/09/19 15:06:44 by phofer            #+#    #+#             */
+/*   Updated: 2025/09/19 15:13:11 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_node **stack)
+void	rotate(t_node **stack)
 {
 	t_node	*first;
-	t_node	*second;
+	t_node	*last;
 
 	if (!*stack || !(*stack)->next)
 		return ;
 	first = *stack;
-	second = (*stack)->next;
+	*stack = first->next;
+	first->next = NULL;
 
-	first->next = second->next;
-	second->next = first;
-	*stack = second;
+	last = *stack;
+	while (last->next)
+		last = last->next;
+	last->next = first;
 }
 
-void	sa(t_node **a)
+void	ra(t_node **a)
 {
-	swap(a);
-	ft_putstr_fd("sa\n", 1);
+	rotate(a);
+	ft_putstr_fd("ra\n", 1);
 }
 
-void	sb(t_node **b)
+void	rb(t_node **b)
 {
-	swap(b);
-	ft_putstr_fd("sb\n", 1);
+	rotate(b);
+	ft_putstr_fd("rb\n", 1);
 }
 
-void	ss(t_node **a, t_node **b)
+void	rr(t_node **a, t_node **b)
 {
-	swap(a);
-	swap(b);
-	ft_putstr_fd("ss\n", 1);
+	rotate(a);
+	rotate(b);
+	ft_putstr_fd("rr\n", 1);
 }
+

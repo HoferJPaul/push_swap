@@ -1,47 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rrotate.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/19 14:36:50 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 14:54:30 by phofer           ###   ########.fr       */
+/*   Created: 2025/09/19 15:13:55 by phofer            #+#    #+#             */
+/*   Updated: 2025/09/19 15:14:27 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_node **stack)
+void	reverse_rotate(t_node **stack)
 {
-	t_node	*first;
-	t_node	*second;
+	t_node	*prev;
+	t_node	*last;
 
 	if (!*stack || !(*stack)->next)
 		return ;
-	first = *stack;
-	second = (*stack)->next;
 
-	first->next = second->next;
-	second->next = first;
-	*stack = second;
+	prev = NULL;
+	last = *stack;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	prev->next = NULL;
+	last->next = *stack;
+	*stack = last;
 }
 
-void	sa(t_node **a)
+void	rra(t_node **a)
 {
-	swap(a);
-	ft_putstr_fd("sa\n", 1);
+	reverse_rotate(a);
+	ft_putstr_fd("rra\n", 1);
 }
 
-void	sb(t_node **b)
+void	rrb(t_node **b)
 {
-	swap(b);
-	ft_putstr_fd("sb\n", 1);
+	reverse_rotate(b);
+	ft_putstr_fd("rrb\n", 1);
 }
 
-void	ss(t_node **a, t_node **b)
+void	rrr(t_node **a, t_node **b)
 {
-	swap(a);
-	swap(b);
-	ft_putstr_fd("ss\n", 1);
+	reverse_rotate(a);
+	reverse_rotate(b);
+	ft_putstr_fd("rrr\n", 1);
 }

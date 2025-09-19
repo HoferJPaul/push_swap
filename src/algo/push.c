@@ -1,47 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/19 14:36:50 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 14:54:30 by phofer           ###   ########.fr       */
+/*   Created: 2025/09/19 14:59:01 by phofer            #+#    #+#             */
+/*   Updated: 2025/09/19 15:04:57 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap(t_node **stack)
+void	push(t_node **from, t_node **to)
 {
-	t_node	*first;
-	t_node	*second;
+	t_node	*tmp;
 
-	if (!*stack || !(*stack)->next)
+	if (!*from)
 		return ;
-	first = *stack;
-	second = (*stack)->next;
-
-	first->next = second->next;
-	second->next = first;
-	*stack = second;
+	tmp = *from;
+	*from = (*from)->next;
+	tmp->next = *to;
+	*to = tmp;
 }
 
-void	sa(t_node **a)
+void	pa(t_node **a, t_node **b)
 {
-	swap(a);
-	ft_putstr_fd("sa\n", 1);
+	push(b, a);
+	ft_putstr_fd("pa\n", 1);
 }
 
-void	sb(t_node **b)
+void	pb(t_node **a, t_node **b)
 {
-	swap(b);
-	ft_putstr_fd("sb\n", 1);
+	push(a, b);
+	ft_putstr_fd("pb\n", 1);
 }
 
-void	ss(t_node **a, t_node **b)
-{
-	swap(a);
-	swap(b);
-	ft_putstr_fd("ss\n", 1);
-}

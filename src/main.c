@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/18 20:27:21 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/19 14:56:57 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	args = NULL;
 	if (argc < 2)
-		return (ft_printf("error, no input"), 0);
+		return (ft_putstr_fd("error, no input", 2), 0);
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
@@ -60,7 +60,7 @@ int	main(int argc, char **argv)
 		if (must_free)
 			free_split(args);
 		return (free_stack(&stack_a),
-			ft_putstr_fd("Error, duplicates detected\n", 1), 0);
+			ft_putstr_fd("Error, duplicates detected\n", 2), 0);
 	}
 	ps_index(stack_a);
 	print_stack(stack_a);
