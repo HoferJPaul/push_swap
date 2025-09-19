@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: phofer <phofer@student.42.fr>              +#+  +:+       +#+         #
+#    By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/24 13:49:01 by phofer            #+#    #+#              #
-#    Updated: 2025/05/24 19:15:09 by phofer           ###   ########.fr        #
+#    Updated: 2025/09/18 17:59:03 by phofer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRC		= ft_strlen.c ft_atoi.c ft_memchr.c ft_memcmp.c ft_strchr.c \
 		  ft_strlcat.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c \
 		  ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-		  ft_strcmp.c ft_strcpy.c ft_strcat.c ft_strncpy.c
+		  ft_strcmp.c ft_strcpy.c ft_strcat.c ft_strncpy.c ft_bubble_sort.c
 OBJ		= $(SRC:.c=.o)
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
