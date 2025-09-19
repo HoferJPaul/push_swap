@@ -24,7 +24,7 @@ You may only use the following commands to manipulate stacks:
 - `rra` / `rrb` — reverse rotate stack A / B
 - `rrr` — `rra` and `rrb` at the same time
 
-Your program should output a valid, optimized sequence of these commands.
+The program should output a valid, optimized sequence of these commands.
 
 ---
 
