@@ -1,0 +1,17 @@
+# Ignore all .log files
+#*.log
+
+# Ignore a specific file
+push_swap
+
+# Ignore a folder (and everything inside it)
+objs/
+
+# Ignore all .tmp files in any directory
+#**/*.tmp
+
+# Ignore files only in root (not subdirs)
+#/.env
+
+# Allow an exception (even if parent pattern ignores it)
+#!important.log
