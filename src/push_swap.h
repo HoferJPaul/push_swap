@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:52:16 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/21 16:45:20 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ void	three_sort(t_node **stack);
 void	four_sort(t_node **a, t_node **b);
 void	five_sort(t_node **a, t_node **b);
 void	sort_dispatch(t_node **a, t_node **b);
+
+void	radix_sort(t_node **stack_a, t_node **stack_b);
 
 /* ==== utils.c ==== */
 int		find_min_index(t_node *stack);

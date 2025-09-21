@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:50:31 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/21 17:34:03 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ int	main(int argc, char **argv)
 			ft_putstr_fd("Error, duplicates detected\n", 2), 0);
 	}
 	ps_index(stack_a);
-	print_stack(stack_a);
+	//print_stack(stack_a);
 	sort_dispatch(&stack_a, &stack_b);
-	print_stack(stack_a);
+	//print_stack(stack_a);
 	free_stack(&stack_a);
 	if (must_free)
 		free_split(args);

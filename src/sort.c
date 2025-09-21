@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 15:24:53 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:52:39 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/21 16:46:28 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,6 @@ void	sort_dispatch(t_node **a, t_node **b)
 		four_sort(a, b);
 	else if (size == 5)
 		five_sort(a, b);
-	// else
-	// 	big_sort(a, b);
+	else
+		radix_sort(a, b);
 }

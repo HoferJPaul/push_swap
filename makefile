@@ -6,7 +6,7 @@
 #    By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/18 14:19:58 by phofer            #+#    #+#              #
-#    Updated: 2025/09/19 16:56:42 by phofer           ###   ########.fr        #
+#    Updated: 2025/09/21 16:44:45 by phofer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBFT_DIR	= include/libft
 PRINTF_DIR	= include/printf
 
 # Files
-SRC_FILES	= main.c ps_lst.c helpers.c parse.c sort.c utils.c\
+SRC_FILES	= main.c ps_lst.c helpers.c parse.c sort.c utils.c radix_sort.c \
 			algo/swap.c algo/push.c algo/rotate.c algo/rev_rotate.c
 
 SRC			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
