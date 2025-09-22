@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/21 16:45:20 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/22 16:29:52 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <limits.h>
 # include "libft.h"
 # include "ft_printf.h"
+
+# define BIG_SORT radix_sort
 
 typedef struct s_node
 {
@@ -50,9 +52,11 @@ void	five_sort(t_node **a, t_node **b);
 void	sort_dispatch(t_node **a, t_node **b);
 
 void	radix_sort(t_node **stack_a, t_node **stack_b);
+void	greedy_sort(t_node **stcak_a, t_node **stack_b);
 
 /* ==== utils.c ==== */
 int		find_min_index(t_node *stack);
+int		find_max_index(t_node *stack);
 int		get_position(t_node *stack, int index);
 void	bring_index_to_top(t_node **stack, int index);
 int		is_sorted(t_node *stack);

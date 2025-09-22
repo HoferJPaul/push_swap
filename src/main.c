@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/21 17:34:03 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/22 15:55:44 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,12 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	args = NULL;
 	if (argc < 2)
-		return (ft_putstr_fd("error, no input", 2), 0);
+		return (ft_putstr_fd("Error\n", 2), 1);
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
+		if (!args || !args[0])
+			return (ft_putstr_fd("Error\n", 2), free_split(args), 0);
 		must_free = 1;
 	}
 	else
@@ -60,12 +62,16 @@ int	main(int argc, char **argv)
 		if (must_free)
 			free_split(args);
 		return (free_stack(&stack_a),
-			ft_putstr_fd("Error, duplicates detected\n", 2), 0);
+			ft_putstr_fd("Error\n", 2), 1);
 	}
 	ps_index(stack_a);
 	//print_stack(stack_a);
 	sort_dispatch(&stack_a, &stack_b);
-	//print_stack(stack_a);
+	// if (!is_sorted(stack_a))
+	// 	ft_putstr_fd("Error, not sorted after algorithm\n", 2);
+	// else
+	// 	ft_putstr_fd("sorting success!\n", 1);
+	// print_stack(stack_a);
 	free_stack(&stack_a);
 	if (must_free)
 		free_split(args);

@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/21 16:32:37 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/21 16:47:50 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/22 16:29:34 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ static int	max_bits(int size)
 
 void	radix_sort(t_node **stack_a, t_node **stack_b)
 {
-	int		i;
-	int		j;
-	int		size;
-	int		bit_max;
+	int	i;
+	int	j;
+	int	size;
+	int	bit_max;
 
 	size = ps_lstsize(*stack_a);
 	bit_max = max_bits(size);
@@ -44,7 +44,7 @@ void	radix_sort(t_node **stack_a, t_node **stack_b)
 			j++;
 		}
 		while (*stack_b)
-			pa (stack_a, stack_b);
+			pa(stack_a, stack_b);
 		i++;
 	}
 }

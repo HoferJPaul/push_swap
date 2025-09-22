@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 16:14:59 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:57:02 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/22 15:47:15 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,22 @@ int	find_min_index(t_node *stack)
 		stack = stack->next;
 	}
 	return (min);
+}
+
+int	find_max_index(t_node *stack)
+{
+	int	max;
+
+	if (!stack)
+		return (-1);
+	max = stack->index;
+	while (stack)
+	{
+		if (stack->index > max)
+			max = stack->index;
+		stack = stack->next;
+	}
+	return (max);
 }
 
 int	get_position(t_node *stack, int index)

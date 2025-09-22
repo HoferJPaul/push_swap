@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 14:57:03 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/22 15:14:34 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int	ps_is_valid_digits(char *str, int i, int sign, long num)
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
-			return (ft_putstr_fd("Error, Input must be digits only\n", 2), 0);
+			return (ft_putstr_fd("Error\n", 2), 0);
 		num = num * 10 + (str[i] - '0');
 		if ((sign == 1 && num > INT_MAX)
 			|| (sign == -1 && (num * -1) < INT_MIN))
-			return (ft_putstr_fd("Error, Outside of INT scope\n", 2), 0);
+			return (ft_putstr_fd("Error\n", 2), 0);
 		++i;
 	}
 	return (1);
@@ -58,7 +58,7 @@ int	ps_is_valid(char *str)
 	num = 0;
 	sign = 1;
 	if (!str || !str[0])
-		return (ft_putstr_fd("Error: Empty string\n", 2), 0);
+		return (ft_putstr_fd("Error\n", 2), 0);
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
@@ -66,7 +66,7 @@ int	ps_is_valid(char *str)
 		++i;
 	}
 	if (!str[i])
-		return (ft_putstr_fd("Error: No digits after sign\n", 2), 0);
+		return (ft_putstr_fd("Error\n", 2), 0);
 	if (!ps_is_valid_digits(str, i, sign, num))
 		return (0);
 	return (1);
