@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 14:36:50 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:20:46 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 14:25:16 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	swap(t_node **stack)
 		return ;
 	first = *stack;
 	second = (*stack)->next;
-
 	first->next = second->next;
 	second->next = first;
 	*stack = second;

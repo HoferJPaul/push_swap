@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/22 15:14:34 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 14:26:57 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	has_duplicates(t_node *stack)
 
 int	ps_is_valid_digits(char *str, int i, int sign, long num)
 {
-
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))

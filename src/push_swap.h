@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/22 16:29:52 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 15:01:34 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,12 @@ typedef struct s_node
 	struct s_node	*next;
 	int				index;
 }	t_node;
+
+typedef struct s_args
+{
+	char	**args;
+	int		must_free;
+}	t_args;
 
 /* ==== ps_lst.c ==== */
 void	ps_lstadd_back(t_node **lst, t_node *new);

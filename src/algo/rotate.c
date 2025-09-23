@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 15:06:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/21 17:38:41 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 14:25:41 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	rotate(t_node **stack)
 	first = *stack;
 	*stack = first->next;
 	first->next = NULL;
-
 	last = *stack;
 	while (last->next)
 		last = last->next;
@@ -47,4 +46,3 @@ void	rr(t_node **a, t_node **b)
 	rotate(b);
 	ft_putstr_fd("rr\n", 1);
 }
-

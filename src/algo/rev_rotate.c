@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/19 15:13:55 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/19 16:20:38 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 14:26:01 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	reverse_rotate(t_node **stack)
 
 	if (!*stack || !(*stack)->next)
 		return ;
-
 	prev = NULL;
 	last = *stack;
 	while (last->next)

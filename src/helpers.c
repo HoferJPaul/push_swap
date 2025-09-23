@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 16:03:44 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/18 20:06:45 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/23 14:26:29 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	free_stack(t_node **stack)
 	}
 	*stack = NULL;
 }
-
 
 void	free_split(char **args)
 {
