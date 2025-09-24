@@ -6,7 +6,7 @@
 /*   By: phofer <phofer@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 15:57:26 by phofer            #+#    #+#             */
-/*   Updated: 2025/09/23 15:01:34 by phofer           ###   ########.fr       */
+/*   Updated: 2025/09/24 14:29:18 by phofer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "libft.h"
 # include "ft_printf.h"
 
-# define BIG_SORT radix_sort
+# define BIG_SORT turk_sort
 
 typedef struct s_node
 {
@@ -58,7 +58,7 @@ void	five_sort(t_node **a, t_node **b);
 void	sort_dispatch(t_node **a, t_node **b);
 
 void	radix_sort(t_node **stack_a, t_node **stack_b);
-void	greedy_sort(t_node **stcak_a, t_node **stack_b);
+void	turk_sort(t_node **stack_a, t_node **stack_b);
 
 /* ==== utils.c ==== */
 int		find_min_index(t_node *stack);
