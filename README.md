@@ -31,7 +31,7 @@ The program should output a valid, optimized sequence of these commands.
 ## 🧠 Key Concepts
 
 - 📦 Stack implementation with linked lists or arrays
-- ⚙️ Algorithm design: radix sort, chunking, greedy logic, etc.
+- ⚙️ Algorithm design: radix sort
 - 🚀 Time and operation count optimization
 - 🧪 Edge case handling (duplicates, invalid input, large input sets)
 
