@@ -108,6 +108,6 @@ ARG="3 2 1 6 5 8"; ./push_swap $ARG | wc -l
 ## 📈 Optimization Strategy
 
 - **Small stacks (≤ 5 elements)**: hardcoded logic for minimal moves  
-- **Large stacks**: radix sort or chunked greedy approach  
+- **Large stacks**: radix sort
 - **Move combination**: reduce redundant operations (`ra` + `rb` → `rr`)  
 - **Cost analysis**: evaluate best move sequence at each step
